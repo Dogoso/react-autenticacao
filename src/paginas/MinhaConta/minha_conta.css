@@ -1,0 +1,35 @@
+.title-div {
+    text-align: center;
+    padding: 10px;
+    background-color: #202e7e;
+    color: white;
+}
+
+.outlet-div {
+    margin-top: 50px;
+}
+
+.outer-body {
+    display: flex;
+}
+
+.body {
+    padding: 30px 100px;
+    margin-bottom: 150px;
+}
+
+.tabs {
+    width: 150px;
+    text-align: center;
+    color: #202e7e;
+    font-size: 1.1rem;
+}
+
+.tabs li {
+    padding: 10px;
+    border-bottom: 1px solid #202e7e;
+}
+
+.title-div h1 {
+    font-size: 32px;
+}
