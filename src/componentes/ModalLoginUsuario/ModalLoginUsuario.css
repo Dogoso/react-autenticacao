@@ -1,0 +1,46 @@
+.corpoModalLogin {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    height: 400px;
+}
+
+.corpoModalLogin form {
+    width: 500px;
+    max-width: 100%;
+}
+
+.corpoModalLogin input {
+    margin-bottom: 5px;
+    height: 50px;
+}
+
+.form-title {
+    margin-bottom: 30px;
+    color: #ffa125;
+    font-size: 24px;
+}
+
+.corpoModalLogin form .acoes .esqueci {
+    color: blue !important;
+    text-decoration: underline;
+    margin-left: 20px;
+}
+
+.corpoModalLogin form .acoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.criar-conta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.criar-conta h2 {
+    color: #2225ee;
+}

@@ -1,0 +1,23 @@
+.corpoModalCadastro {
+    display: flex;
+    align-items: center;
+    padding: 32px;
+    height: 400px;
+}
+
+.corpoModalCadastro form {
+    width: 500px;
+    max-width: 100%;
+}
+
+.corpoModalCadastro input {
+    margin-bottom: 5px;
+    height: 35px;
+}
+
+.corpoModalCadastro form .acoesCadastro {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 90px;
+}
