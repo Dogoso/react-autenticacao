@@ -9,6 +9,7 @@ const Pedidos = () => {
 
     const [pedidos, setPedidos] = useState<IPedido[]>([])
     const navigate = useNavigate()
+    const currencyFormatter = Intl.NumberFormat('pt-br', { style: 'currency', currency: 'BRL' })
 
     useEffect(() => {
         let token = sessionStorage.getItem('token')
@@ -23,6 +24,9 @@ const Pedidos = () => {
             })
     }, [])
 
+    const formatDate = (date: string) => new Date(date).toLocaleDateString()
+    const formatCurrency = (value: number) => currencyFormatter.format(value)
+
     return (
         <section>
             <h2>Pedidos</h2>
@@ -30,10 +34,10 @@ const Pedidos = () => {
                 {pedidos.map(pedido => (
                     <div className="pedidos__card">
                         <div className="pedidos__card__info">
-                            <span>Pedido: <strong>123456</strong></span> <br />
-                            <span>Data do pedido: <strong>06/11/2022</strong></span> <br />
-                            <span>Valor total: <strong>R$42,00</strong></span> <br />
-                            <span>Entrega realizada em: <strong>14/11/2022</strong></span> <br />
+                            <span>Pedido: <strong>{pedido.id}</strong></span> <br />
+                            <span>Data do pedido: <strong>{formatDate(pedido.data)}</strong></span> <br />
+                            <span>Valor total: <strong>{formatCurrency(pedido.total)}</strong></span> <br />
+                            <span>Entrega realizada em: <strong>{formatDate(pedido.entrega)}</strong></span> <br />
                         </div>
                         <div className="pedidos__card__button">
                             <AbBotao texto="Detalhes" />
