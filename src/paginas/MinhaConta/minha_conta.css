@@ -6,7 +6,8 @@
 }
 
 .outlet-div {
-    margin-top: 50px;
+    padding: 50px;
+    width: 100%;
 }
 
 .outer-body {
