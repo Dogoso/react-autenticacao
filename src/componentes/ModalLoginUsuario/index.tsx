@@ -1,7 +1,7 @@
-import axios from "axios"
 import { AbBotao, AbCampoTexto, AbModal } from "ds-alurabooks"
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import http from "../../http/http"
 
 import imagemLegal from './assets/login.png'
 
@@ -23,7 +23,7 @@ const ModalLoginUsuario = ({ aberto, aoFechar }: PropsModalInterface) => {
       email,
       senha,
     }
-    axios.post('http://localhost:8000/public/login/', usuario)
+    http.post('/public/login/', usuario)
       .then(response => {
         let accessToken = response.data.access_token
         sessionStorage.setItem('token', accessToken)

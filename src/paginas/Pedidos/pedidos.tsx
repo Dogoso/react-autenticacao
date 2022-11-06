@@ -1,7 +1,7 @@
-import axios from "axios"
 import { AbBotao } from "ds-alurabooks"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import http from "../../http/http"
 import './pedidos.css'
 import { IPedido } from "./pedidos_interfaces"
 
@@ -12,10 +12,7 @@ const Pedidos = () => {
     const currencyFormatter = Intl.NumberFormat('pt-br', { style: 'currency', currency: 'BRL' })
 
     useEffect(() => {
-        let token = sessionStorage.getItem('token')
-        axios.get<IPedido[]>('http://localhost:8000/pedidos',
-            { headers: { 'Authorization': `Bearer ${token}` } }
-        )
+        http.get<IPedido[]>('/pedidos')
             .then(info => {
                 setPedidos(info.data)
             })
